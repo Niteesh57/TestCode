@@ -9,7 +9,6 @@ class Item(BaseModel):
     name: str = Field(..., min_length=1)
     description: Optional[str] = None
     price: float = Field(..., gt=0)
-    tax: Optional[float] = None
 
 storage: Dict[UUID, Item] = {}
 
